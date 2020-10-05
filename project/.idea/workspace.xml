@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="126b5b44-242b-4565-81bc-0140f378d163" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>clinic and</find>
+      <find>./index.html</find>
+      <find>Home</find>
+      <find>dropdown3</find>
+      <find>rigister</find>
+      <find>login</find>
+      <find>img = models.ImageField(upload_to</find>
+      <find>settings</find>
+      <find>{</find>
+      <find>{{obj.doctor_specialization</find>
+      <find>ad</find>
+      <find>sev</find>
+      <find>if</find>
+      <find>upload</find>
+      <find>src</find>
+      <find>form</find>
+      <find>search</find>
+      <find>profile</find>
+      <find>socia</find>
+      <find>img</find>
+      <find>bio</find>
+      <find>about</find>
+    </findStrings>
+  </component>
+  <component name="ProjectId" id="1fkOpFWX8BWbBtQXkg0F8SHjapd" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../graduate/graduate/project" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\graduate\project\account\templates\account" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\دراسه\4th\TERM 2\gradution project\graduate\graduate\project\account\templates\account" />
+      <recent name="D:\projects\graduate\project\account\templates\account" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="126b5b44-242b-4565-81bc-0140f378d163" name="Default Changelist" comment="" />
+      <created>1596758804262</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596758804262</updated>
+    </task>
+    <servers />
+  </component>
+</project>

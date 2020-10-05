@@ -1,0 +1,129 @@
+<!-- start Patient-dasboard side -->
+{%extends 'account/base.html' %}
+{%load static%}
+    {%block content%}
+    <div class="nav-patient-dashboard">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <ul id="slide-out" class="sidenav">
+              <li><div class="user-view">
+                <div class="background">
+                  <img src="{% static './images/6.jpg' %}">
+                </div>
+                <a href="#user"><img class="circle p-d-image"
+                                     {%if patient.img%}
+                                     src = "{{patient.img.url}}"
+                                     {%else%}
+                  <img src="{% static './images/patients/patient1.jpg' %}" alt>
+                                     {% endif %}
+                </a>
+                <a href="#name"><span class="white-text name">{{patient.patient_name}}</span></a>
+                <a href="#email"><span class="white-text email">{{patient.user.email}}</span></a>
+              </div></li>
+              <li><a href=""><i class="material-icons">assignment_ind</i>Dashboard</a></li>
+              <li><a href="{% url 'update_patient_profile' patient.pk%}"><i class="material-icons">settings</i>Setting</a></li>
+              <li><a href="./patient-change-password.html"><i class="material-icons">lock</i>Change password</a></li>
+              <li><a href="#!"><i class="material-icons">exit_to_app</i>Log out</a></li>
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger nav-icon-d"><i class="material-icons">reorder</i></a>
+            <span class="label-p-dashboard">patient dasboard</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+   <!-- End Patient-dasboard side -->
+
+
+  <!-- start patient profile -->
+
+  <div class="patient-profile">
+    <div class="row">
+      <div class="col s12 l3 theiaStickySidebar">
+        <div class="p-profile center">
+          <div class="p-pic">
+            <img src="{% static './images/patients/patient1.jpg'%}" alt=""><br>
+            <h6 class="p-name">{{patient.patient_name}}</h6>
+            <span class="p-id">Patient ID: </span><span>{{patient.pk}}</span>
+            <p class="p-place"><i class="fas fa-location-arrow"></i><span>{{patient.address}}</span></p>
+          </div>
+          <!-- <form action="" class="left">
+            <input class="log-out left" type="submit" value="Log Out">
+          </form> -->
+        </div>
+      </div>
+      <div class="col s12 l9">
+        <div class="p-appoitment">
+          <div class="p-appoitment-label">
+            <h6>Appoitment</h6>
+            <div class="p-appoitment-info">
+              <table class="highlight">
+                <thead>
+                  <tr>
+                      <th>Doctor Name</th>
+                      <th>Aoopitment</th>
+                      <th>Amount</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                  </tr>
+                </thead>
+        
+                <tbody>
+                {% for appointment in appointments%}
+                  <tr>
+                    <td><a href="{%url 'doctor_profile' appointment.doctor.pk %}">{{appointment.doctor.doctor_name}}</a></td>
+                    <td>{{appointment.appointment_date}}</td>
+                    <td>{{appointment.doctor.price}}</td>
+                    {% if appointment.approve%}
+                    <td><i class="fas fa-check-circle"></i></td>
+                    {% else%}
+                    <td>this appointment in waiting list</td>
+                    {% endif%}
+                    <td><a class="action-app"><i class="fas fa-edit"></i> Edit</a></td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+                <!-- DivTable.com -->
+            </div>
+          </div>
+        </div>
+        <div class="p-appoitment p-prescription">
+          <div class="p-appoitment-label">
+            <h6>records</h6>
+            <div class="p-appoitment-info">
+              <table class="highlight">
+                <thead>
+                  <tr>
+                      <th>Date</th>
+                      <th>Created by</th>
+                      <th>Action</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                {% for record in records%}
+                  <tr>
+                    <td>{{record.created_at}}</td>
+                    <td><a href="{% url 'doctor_profile' record.doctor.pk %}">{{record.doctor.doctor_name}}</a></td>
+                    <td>
+                      <a href="/view_record/{{record.pk}}" class="action-app p-preception-view"><i class="fas fa-eye"></i> View</a>
+                    </td>
+                  </tr>
+                {% endfor%}
+                </tbody>
+              </table>
+                <!-- DivTable.com -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- End patient profile -->
+
+
+ {% endblock content%}
+

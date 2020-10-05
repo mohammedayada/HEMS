@@ -1,0 +1,178 @@
+{% extends 'account/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <!-- start doctor-profile bar title -->
+    <div class="search-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div class="search-bar-title">
+              <h6>Doctor Profile</h6>
+              {% if user.pk == doctor.user.pk %}
+              <button class="btn"><a style="color: #FFF;" href="{% url 'update_doctor_profile' doctor.user.id%}">update profile</a style="color: #FFF;"></button>
+              <button class="btn"><a style="color: #FFF;" href="{% url 'doctor_dashboard' %}">show dashboard</a style="color: #FFF;"></button>
+              <button class="btn"><a style="color: #FFF;" href="{% url 'change_password' %}">change password</a style="color: #FFF;"></button>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  <!-- end doctor-profile bar title -->
+
+  <div class="doctor-profile">
+    <div class="row">
+      <div class="col s12 l4">
+        <div class="profile">
+          <div class="doctor-pic">
+            <img
+                    {%if doctor.img%}
+                    src="{{doctor.img.url}}"
+                    {%else%}
+                    src="{%static 'images/doctor/doctor-02.jpg'%}"
+                    {%endif%}
+                    alt="" srcset="">
+            <span>{{doctor.doctor_name}}</span><br>
+            <span>Specialist in {{doctor.doctor_specialization}}</span>
+          </div>
+          <div class="doctor-information">
+            <ul>
+              <li><i class="fas fa-hospital"></i><span>clinic_name</span></li>
+              <li><i class="fas fa-location-arrow"></i><span>clinic_address</span></li>
+              <li><i class="fas fa-money-bill"></i><span>{{doctor.price}}</span></li>
+              <li><i class="fas fa-clock"></i><span>10 min</span></li>
+              <li><i class="fas fa-phone-alt"></i><span>clinic phone</span></li>
+            </ul>
+          </div>
+          <div class="doctor-social">
+            <ul>
+              <li><a href="{{doctor.facebook}}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="mailto://{{doctor.user.email}}" target="_blank"><i class="fab fa-google"></i></a></li>
+              <li><a href="{{doctor.twitter}}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="{{doctor.youtube}}" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="doctor-service">
+          <div class="p-rating">
+            <button class="p-rating-star"><i class="fas fa-star"></i></button>
+            <button class="p-rating-star"><i class="fas fa-star"></i></button>
+            <button class="p-rating-star"><i class="fas fa-star"></i></button>
+            <button class="p-rating-star"><i class="fas fa-star"></i></button>
+            <button class="p-rating-star"><i class="fas fa-star"></i></button>
+          </div>
+          <div class="doctor-like">
+            <i class="fas fa-thumbs-up"></i><span>65</span>
+          </div>
+          <div class="doctor-comment">
+            <i class="fas fa-comment"></i><span>65</span>
+          </div>
+          <div class="patient-number">
+            <i class="fas fa-procedures"></i><span>98</span>
+          </div>
+          <div class="doctor-services">
+            <span>Service(15)</span>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 l8">
+        <div class="doctor-appitment-data">
+          <div class="appoitment">
+            <div class="appoitment-label">
+              <h6>Pick The Date</h6>
+            </div>
+            <form method="POST">
+              {%csrf_token%}
+              <input type="datetime-local" name="book-time"  id="input-date-time-picker" placeholder="Choose appoitment">
+              <div class="rules">
+                <h6>Some of rules</h6>
+                <ul>
+                  <li><span>Payment in the hospital</span></li>
+                  <li><span>Come before 10 min from your appoitment</span></li>
+                  <li><span>lorem ipseum lorem</span></li>
+                  <li><span>lorem ipseum</span></li>
+                </ul>
+              </div>
+              <input class="confirm-btn" type="submit" value="book appointment">
+            </form>
+          </div>
+          <div class="docotor-data">
+            <div class="doctor-date-info">
+              <ul class="collapsible">
+                <li class="active">
+                  <div class="collapsible-header"><i class="material-icons">filter_drama</i><span>About The Doctor</span></div>
+                  <div class="collapsible-body">
+                      {{doctor.bio}}
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="doctor-education">
+            <div class="education-label">
+              <h6>Education</h6>
+            </div>
+            <ul>
+              <li>{{doctor.education}}</li>
+            </ul>
+            <div class="education-label">
+              <h6>Work & Experience</h6>
+            </div>
+            <ul>
+              <li>Glowing Smiles Family Dental Clinic</li>
+              <li>Comfort Care Dental Clinic</li>
+              <li>Dream Smile Dental Practice</li>
+            </ul>
+          </div>
+          <div class="docotor-comment">
+            <div class="comment-label">
+              <h6>Comment</h6>
+            </div>
+            <ul class="collection">
+              <li class="collection-item avatar">
+                <img src="{%static 'images/doctor/doctor-02.jpg'%}" alt="" class="circle">
+                <span class="title">omar ali soliman</span>
+                <p>This is a good doctor </p>
+                <p>22-1-2020 6:07</p>
+                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+              </li>
+              <li class="collection-item avatar">
+                <img src="{%static 'images/doctor/doctor-03.jpg'%}" alt="" class="circle">
+                <span class="title">tasneem mohamed</span>
+                <p>This is a good doctor </p>
+                <p>22-1-2020 6:07</p>
+                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+              </li>
+              <li class="collection-item avatar">
+                <img src="{%static 'images/doctor/doctor-04.jpg'%}" alt="" class="circle">
+                <span class="title">ahmed mohamed khaled</span>
+                <p>This is a good doctor </p>
+                <p>22-1-2020 6:07</p>
+                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+              </li>
+              <li class="collection-item avatar">
+                <img src="{%static 'images/doctor/doctor-05.jpg'%}" alt="" class="circle">
+                <span class="title">nada mostafa ahmed</span>
+                <p>This is a good doctor </p>
+                <p>22-1-2020 6:07</p>
+                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+              </li>
+              <li class="collection-item">
+                <form action="">
+                  <input type="text" name="leave-comment" id="leave-comment" placeholder="leave comment">
+                  <input type="submit" value="Send" class="send-comment">
+                </form>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ {% endblock content%}

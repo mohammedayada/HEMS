@@ -1,0 +1,56 @@
+{% extends 'account/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+  <!-- start rigister page -->
+  <div class="rigister">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 rigister-pic hide-on-med-and-down">
+          <div class="pic"></div>
+        </div>
+        <div class="col l6 rigister-form center">
+          <div class="rigister-label">
+            <h6>patient Rigister<h6/>
+          </div>
+          <form method="POST" >
+            {%csrf_token%}
+            <input type="email" name="email" id="rigister-email" placeholder="Email">
+            <input type="text" name="name" id="rigister-name" placeholder="user name">
+            <input type="password" name="password" id="rigister-password" placeholder="password">
+            <input type="text" name="address" id="rigister-confirm-password" placeholder="address">
+            <input type="number" name="age" id="age" placeholder="age">
+
+              <input type="number" name="id" id="rigister-id-number" placeholder="ID Number">
+            <input type="tel" pattern="[0-9]{11}" name="phone_number" id="rigister-phone-number" placeholder="Phone Number">
+            <input type="date" name="birthday" id="rigirster-name" placeholder="user birthday">
+
+            <input class="rigister-btn" type="submit" value="Rigister">
+               <select  name="gender">
+              <option value="male">male</option>
+              <option value="female">female</option>
+            </select>
+
+            <select name="doctor_specialization">
+             {%for obj in List%}
+              <option value="{{obj}}">{{obj}}</option>
+              {%endfor%}
+            </select>
+
+          </form>
+          <div class="have-an-account left">
+            <a class="left" href="{%url 'doctor_reg' %}">Are you Doctor ?</a><br>
+            <a class="left" href="#">Are you have an account ?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- end rigister page -->
+
+
+ {% endblock content%}

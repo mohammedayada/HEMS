@@ -1,0 +1,55 @@
+{% extends 'account/base.html' %}
+{% load static %}
+
+
+{% block content %}
+  <!-- start rigister page -->
+  <div class="rigister">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 rigister-pic hide-on-med-and-down">
+          <div class="pic"></div>
+        </div>
+        <div class="col l6 rigister-form center">
+          <div class="rigister-label">
+            {% if record %}
+            <h6>record</h6>
+            {% else %}
+            <h6>create record<h6/>
+              {%endif%}
+          </div>
+          {%if record%}
+          <p>doctor name: <a href="{% url 'doctor_profile' record.doctor.pk %}">{{record.doctor.doctor_name}}</a></p>
+          <p>date: {{record.created_at}}</p><br>
+
+          <label style="color:black; font-size:20px">doctor description</label><br>
+            <textarea name="description" readonly   >{{record.record_description}}
+              </textarea><br><br><br>
+          <label style="color:black; font-size:20px">the treatment</label><br>
+            <textarea name="treatment" readonly placeholder="enter the treatment">{{record.treatment}}
+            </textarea><br><br><br>
+          <label style="color:black; font-size:20px">note</label>
+            <input type="text" readonly name="notes"  value="{{record.notes}}">
+          {% else%}
+          <form method="POST">
+            {%csrf_token%}
+            <label style="color:black; font-size:20px">enter your description</label><br>
+            <textarea name="description" style="height:200px"  >
+
+            </textarea><br><br><br>
+            <label style="color:black; font-size:20px">enter the treatment</label><br>
+            <textarea name="treatment" style="height:100px"  placeholder="enter the treatment">
+
+            </textarea><br><br><br>
+            <label style="color:black; font-size:20px">enter any note</label>
+            <input type="text" name="notes">
+            <input class="rigister-btn" type="submit" value="create record">
+          </form>
+          {%endif%}
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock content %}

@@ -1,0 +1,43 @@
+{% extends 'account/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+  <!-- start login -->
+  <div class="login">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 login-pic hide-on-med-and-down">
+          <div class="pic"></div>
+        </div>
+        <div class="col l6 login-form">
+          <div class="login-label center"><h6>Login to continue</h6></div>
+          <form method="post">
+            {%csrf_token%}
+            <input type="text" name="username" id="login-user-name" placeholder="user name">
+            <input type="password" name="password" id="login-password" placeholder="password" >
+            <select name="type">
+              <option value="doctor" selected disabled>Are you ?</option>
+              <option value="doctor">Doctor</option>
+              <option value="patient">Patient</option>
+            </select><br>
+            <label class="remember">
+              <input type="checkbox" />
+              <span>Remember me</span>
+            </label>
+            <a class="forget-password" href="#">forget password ?</a><br>
+            <input class="login-btn" type="submit" value="login">
+          </form>
+          <div class="dont-havae-account left">
+            <a  href="{%url 'index' %}">Dont have acount ? </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end login -->
+
+ {% endblock content%}

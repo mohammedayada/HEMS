@@ -1,0 +1,57 @@
+{% extends 'account/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+  <!-- start rigister page -->
+  <div class="rigister">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 rigister-doctor-pic hide-on-med-and-down">
+          <div class="pic"></div>
+        </div>
+        <div class="col l6 rigister-form center">
+          <div class="rigister-label">
+            <h6>Doctor Rigister<h6/>
+          </div>
+          <form method="POST" enctype="multipart/form-data" >
+            {%csrf_token%}
+            <input type="email" name="email" id="rigister-docotr-email" placeholder="Email">
+            <input type="text" name="name" id="rigister-docotr-name" placeholder="doctor name">
+            <input type="text" name="address" id="r4igister-docotr-name" placeholder="doctor address">
+              <input type="number" name="age" id="age" placeholder="age">
+            <input type="password" name="password" id="rigister-docotr-password" placeholder="password">
+            <input type="number" name="id" id="rigister-docotr-id-number" placeholder="ID Number">
+            <input type="tel"maxlength="11" pattern="[0-9]{11}" name="phone_number" id="phone-number" placeholder="Phone Number">
+            <input type="number" name="price" id="rigister-docotr-price" placeholder="yor price / h">
+            <select  name="gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+
+            </select>
+
+            <select name="doctor_specialization">
+             {%for obj in List%}
+              <option value="{{obj}}">{{obj}}</option>
+              {%endfor%}
+            </select>
+
+            <input class="rigister-btn" type="submit" value="Rigister">
+
+
+          </form>
+          <div class="have-an-account left">
+            <a class="left" href="{%url 'patient_reg' %}">Are you Patient ?</a><br>
+            <a class="left" href="#">Are you have an account ?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- end rigister page -->
+
+
+ {% endblock content%}

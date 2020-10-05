@@ -1,0 +1,1828 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins",sans-serif;
+}
+
+/* start uppernav */
+.uppernav{
+  background-color: #13a4cd;
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+}
+
+.uppernav .row{
+  padding: 0;
+  margin: 0;
+}
+
+.uppernav i{
+  margin-right: 6px;
+}
+
+/*  end uppernav */
+
+
+/* start nav */
+nav{
+  background-color: #fff;
+  border: 1px solid #DDD;
+  transition: all 1s ease;
+}
+
+nav a{
+  color: #000 !important;
+  outline: 0;
+}
+
+nav a img{
+  width: 220px;
+}
+
+.sticky-nav{
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.sticky-p-d-nav{
+  position: sticky;
+  top: 0;
+  z-index: 0;
+}
+
+/* end nav */
+
+/* start search pic and search header */
+.search-pic{
+  background: #f9f9f9 url(../images/search-bg.png) no-repeat bottom center;
+  min-height: 450px;
+  background-size: 100% auto;
+  position: relative;
+  background-blend-mode: Darken;
+  padding: 80px 0;
+}
+
+.search-pic .search-header{
+  font-size: 50px;
+  font-family: "Poppins",sans-serif;
+}
+
+@media (max-width: 524px) {
+  .search-pic .search-header{
+    font-size: 30px;
+  }
+  
+}
+
+.search-pic .search-sentence{
+  color: #757575;
+  font-family: "Poppins",sans-serif;
+}
+
+.search-pic .search-form{
+  padding: 0 !important;
+}
+
+.search-pic #search-info-all{
+  background-color: #fff !important;
+  border-bottom: 0;
+  padding: 5px !important;
+  padding-left: 40px !important;
+  border: 1px solid #77557762 !important;
+  background: #fff url(../images/search.png) no-repeat 10px center
+}
+
+.search-pic #search-info-all:focus{
+  box-shadow: 0 1px 0 0 #13a4cd;
+}
+
+.search-pic .form-text{
+  display: inline-block;
+  color: #757575;
+  width: 700px;
+  text-align: center;
+}
+
+.search-pic form{
+  position: relative;
+}
+
+.search-pic .search-submit{
+  position: absolute;
+  top: 0px;
+  right: -50px;
+  height: 57px;
+  padding: 10px;
+  background-color: #09e5ab;
+  border: 1px solid #09e5ab;
+}
+
+@media (max-width: 524px) {
+  .search-pic .search-submit{
+    height: 54px;
+  }
+  
+}
+
+.search-pic .material-icons{
+  color: #fff;
+}
+
+/* end search pic and search header */
+
+/* start special search */
+
+.special-search h1{
+  font-size: 40px !important;
+}
+
+.select-wrapper input.select-dropdown,
+.special-search #doctor-name{
+  border: 1px solid #757575 !important;
+  margin-top: 50px;
+  padding-left: 10px;
+}
+
+.special-search .material-icons{
+  display: block;
+  font-size: 35px;
+  color: #13a4cd;
+}
+
+.special-search .icon-input{
+  font-size: 45px;
+  color: #13a4cd;
+}
+
+.special-search .label-span-input{
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 2px;
+  color: #13a4cd;
+}
+
+.special-search .label-span{
+  font-size: 17px;
+  color: #13a4cd;
+}
+
+.special-search .search-icon-special{
+  color: #fff;
+}
+
+.special-search .btn{
+  width: 200px;
+  height: 60px;
+  font-size: 20px;
+  background-color: #09e5ab;
+}
+
+/* end special search */
+
+/* start book now */
+.book-now{
+  padding-bottom: 20px;
+  padding-top: 40px;
+  border-top: 15px solid #E6F5F9;
+  border-bottom: 10px solid #E6F5F9;
+  background-color: #fff;
+  clip-path: polygon(51% 4%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 50% 97%, 0 100%, 0% 70%, 0% 35%, 0 0);
+}
+
+.book-now .header{
+  padding-top: 40px;
+  margin-left: 20px;
+}
+
+@media(max-width : 524px){
+  .book-now .header{
+    font-size: 30px;
+  }
+}
+
+.book-now .descreption{
+  margin-left: 20px;
+}
+
+.book-now .book-now-img-parent{
+  background-color: #fff;
+  padding: 10px;
+}
+
+.book-now .book-now-img{
+  background: #f9f9f9 url(../images/book-now/book-now.png) no-repeat bottom center;
+  display: block;
+  margin: auto;
+  width: 700px;
+  height: 450px;
+  margin-top: 20px;
+  background-size: 100% auto;
+  transition: all .5s ease;
+}
+
+.book-now .book-now-img:hover
+{
+  box-shadow:
+          1px 1px #53a7ea,
+          2px 2px #53a7ea,
+          3px 3px #53a7ea;
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
+  cursor: pointer;
+}
+
+.book-now .btn{
+  width: 200px;
+  height: 60px;
+  font-size: 20px;
+  background-color: #09e5ab;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+/* end book now */
+
+
+/* start our feture */
+.our-feature{
+  padding-top: 50px;
+  background-color: #F8F9FA;
+  padding-bottom: 50px;
+}
+
+.our-feature .feature-img{
+  height: 250px;
+  width: 100%;
+  /* border-radius: 50%; */
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #fff;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  outline: 0;
+  -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+  transition: all .5s ease;
+}
+
+/* .our-feature div.feature-img:first-of-type{
+  background:linear-gradient(0deg, rgba(31, 38, 48, 0.4), rgba(31, 38, 48, 0.4)), url(../images/features/feature-01.jpg);
+  background-size: cover;
+}
+.our-feature div.feature-img:nth-of-type(1){
+  background:linear-gradient(0deg, rgba(31, 38, 48, 0.4), rgba(31, 38, 48, 0.4)), url(../images/features/feature-02.jpg);
+  background-size: cover;
+}
+.our-feature div.feature-img:nth-of-type(2){
+  background:linear-gradient(0deg, rgba(31, 38, 48, 0.4), rgba(31, 38, 48, 0.4)), url(../images/features/feature-03.jpg);
+  background-size: cover;
+}
+.our-feature div.feature-img:last-of-type{
+  background:linear-gradient(0deg, rgba(31, 38, 48, 0.4), rgba(31, 38, 48, 0.4)), url(../images/features/feature-04.jpg);
+  background-size: cover;
+} */
+
+
+.our-feature div.feature-img-1{
+  background:linear-gradient(0deg, rgba(31, 38, 48, 0.4), rgba(31, 38, 48, 0.4)), url(../images/features/feature-01.jpg);
+  background-size: cover;
+}
+.our-feature div.feature-img-2{
+  background:linear-gradient(0deg, rgba(31, 38, 48, 0.4), rgba(31, 38, 48, 0.4)), url(../images/features/feature-02.jpg);
+  background-size: cover;
+}
+.our-feature div.feature-img-3{
+  background:linear-gradient(0deg, rgba(31, 38, 48, 0.4), rgba(31, 38, 48, 0.4)), url(../images/features/feature-03.jpg);
+  background-size: cover;
+}
+.our-feature div.feature-img-4{
+  background:linear-gradient(0deg, rgba(31, 38, 48, 0.4), rgba(31, 38, 48, 0.4)), url(../images/features/feature-04.jpg);
+  background-size: cover;
+}
+
+@media(max-width: 524px){
+  .our-feature .feature-img{
+    height: 150px;
+    width: 100%;
+    /* border-radius: 50%; */
+  }
+}
+
+.our-feature .feature-img:hover{
+  outline: 0;
+  /* -webkit-transform: scale(1.02);
+  transform: scale(1.02); */
+  background-position: 0% 50%;
+	filter: grayscale(0);
+}
+
+.our-feature .header{
+  padding-bottom: 30px;
+}
+
+.our-feature .feature-content{
+  margin-top: 20px;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  border-radius: .25rem;
+  background-color: #fff;
+}
+
+@media(max-width: 524px){
+  .our-feature .feature-content{
+    margin-top: 0px;
+    font-size: 12px;
+    padding: 0.5rem;
+  }
+}
+
+.our-feature .feture-title{
+  color: #13a4cd;
+}
+
+/* .our-feature .feature-img:hover{
+  opacity: 1;
+  background-size: cover;
+} */
+
+.our-feature .feature-img .favorite-heart{
+  position: absolute;
+  top: 100%;
+  left: 47%;
+  font-size: 40px;
+  color: #0de0fe;
+  transition: all 1s ease;
+}
+
+.our-feature .feature-img:hover .favorite-heart{
+  top: 45%;
+}
+
+
+/* end our feture */
+
+/* start slick slider */
+.slider-slick{
+  padding-top: 40px;
+}
+
+.slider-slick .header{
+  font-size: 40px;
+}
+
+@media(max-width: 524px){
+  .slider-slick .header{
+    font-size: 30px;
+  }
+}
+
+.specialities-slider .slick-slide {
+  display: block;
+  padding: 0 12px;
+  margin-left: 0;
+  margin-right: 20px;
+margin-top: 10px;
+}
+.specialities-slider .slick-dots {
+  margin-top: 44px;
+  position: unset;
+}
+.speicality-img {
+position: relative;
+height: 150px;
+box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.1);
+border-radius: 100%;
+width: 150px;
+background: #fff;
+}
+.speicality-img img {
+position: absolute;
+top: 50%;
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+left: 0;
+right: 0;
+margin: 0 auto;
+}
+.speicality-img span {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  box-shadow: 1px 6px 14px rgba(0,0,0,0.2);
+  border-radius: 50%;
+  padding: 5px;
+  background-color: #2e87b3;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+}
+.speicality-img span i {
+  font-size: 15px;
+color:#0de0fe;
+}
+.speicality-item p {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 30px 0 0;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 5px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 5px;
+  padding: 0;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: #C0C0C0;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1;
+}
+.slick-dots li button:before {
+  display: none;
+  font-family: 'slick';
+  font-size: 76px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: '-';
+  text-align: center;
+  opacity: .25;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button {
+  background-color: #0de0fe;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #0de0fe;
+}
+.slick-slide {
+outline: none !important;
+}
+
+/* end slider slick */
+
+
+/* start footer */
+.footer{
+  background-color: #2e87b3;
+  padding-top: 40px;
+}
+
+.footer .row{
+  margin-bottom: 0 !important;
+}
+
+.footer .footer-header{
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.footer .footer-header img{
+  width: 180px;
+}
+
+@media(max-width:524px){
+  .footer .footer-header{
+    font-size: 25px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+  }
+}
+
+.footer .footer-descreption{
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.footer .follow-icon{
+  list-style-type: none;
+}
+
+.footer .follow-icon li{
+  float: left;
+  margin-right: 15px;
+}
+
+.footer .follow-icon li a i{
+  color: #fff;
+  font-size: 30px;
+  margin-top: 20px;
+  transition: all .5s ease;
+}
+
+.footer .follow-icon li a i:hover{
+  color: #0de0fe;
+}
+
+.footer .footer-pient-doctor{
+  list-style-type: none;
+}
+
+.footer .footer-pient-doctor li a{
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.footer .footer-pient-doctor li{
+  transition: all .6s ease;
+  width: 25%;
+}
+
+.footer .footer-pient-doctor li:before{
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f0da";
+  font-size: 18px;
+  margin-right: 8px;
+  margin-top: 3px;
+  color: #fff;
+}
+
+.footer .footer-pient-doctor li:hover{
+  transform: translateX(10px);
+}
+
+.footer .footer-contact{
+  list-style-type: none;
+}
+
+.footer .footer-contact i{
+ color: #fff;
+ font-size: 18px;
+ margin-right: 8px;
+}
+
+.footer .footer-contact li{
+  color: #fff;
+  margin-top: 15px;
+}
+
+/* end footer */
+
+/* start copy right */
+.copy-right{
+  margin-top: 20px;
+  border-top: 1px solid #F8F9FA;
+}
+
+.copy-right h6{
+  color: #F8F9FA;
+}
+
+/* end copy right */
+
+
+/* ==================================start login page=========================================================== */
+
+.login-pic > div{
+  margin-left: -150px !important;
+  margin-top: 35px;
+ }
+
+.login-pic .pic{
+  background-image: url(../images/login.png);
+  background-size: cover;
+  height: 450px;
+}
+
+.login .login-form{
+  margin-top: 90px;
+  position: relative;
+}
+
+.login .login-form form input{
+  border: 1px solid #DDD !important;
+  padding-left: 15px !important;
+}
+
+.login .login-form .forget-password{
+  position: absolute;
+  right: 0;
+}
+
+.login .login-form .login-btn{
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #09e5ab;
+  border: 1px solid #09e5ab;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.login .login-form form .select-wrapper input.select-dropdown{
+  margin-top: 0 !important;
+}
+
+
+.login .login-with-accout button{
+  margin: 30px 0 10px 0;
+  width: 100px;
+  height: 30px;
+}
+
+.login .login-with-accout button{
+  color: #fff;
+  cursor: pointer;
+}
+
+.login .login-with-accout button:first-of-type{
+  background-color: #3b5999;
+  border: 1px solid #3b5999;
+}
+
+.login .login-with-accout button:last-of-type{
+  background-color: #dd4b39;
+  border: 1px solid #dd4b39;
+} 
+
+/* ==================================start Rigister page=========================================================== */
+
+.rigister-pic > div{
+ margin-left: -150px !important;
+ margin-top: 35px;
+}
+
+.rigister-pic .pic{
+  background-image: url(../images/rigister.png);
+  height: 450px;
+  background-size: cover;
+}
+
+.rigister-form{
+  margin-top: 50px;
+}
+
+.rigister-form form input{
+  border: 1px solid #DDD !important;
+  padding-left: 20px !important;
+}
+
+.rigister .rigister-form .rigister-btn{
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #09e5ab;
+  border: 1px solid #09e5ab;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* ==================================start Rigister docotr page=========================================================== */
+
+.rigister-doctor-pic > div{
+  margin-left: -150px !important;
+  margin-top: 35px;
+ }
+ 
+
+.rigister-doctor-pic .pic{
+  background-image: url(../images/doctor-rigister.png);
+  height: 450px;
+  background-size: cover;
+}
+
+/* ==================================start Search docotr page=========================================================== */
+
+/* start search bar */
+
+.body-doctor-search{
+  background-color: #F8F9FA;
+}
+
+.search-bar{
+  background-color: #2e87b3;
+  height: 70px;
+  line-height: 70px;
+}
+
+.search-bar h6{
+  margin: 0;
+  padding: 0;
+  line-height: 70px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-left: -10px;
+}
+
+/* end search bar */
+
+/* start search doctor divs */
+
+/* start filter */
+.filter{
+  border: 1px solid #DDD;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 .5rem .5rem #F8F9FA;
+  border-radius: .25rem;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+
+.filter .filter-label{
+  font-size: 25px;
+  text-transform: capitalize;
+  border-bottom: 1px solid #DDD;
+  padding-bottom: 10px;
+
+}
+
+.filter #date-search{
+  background-color: transparent;
+  margin-top: 15px;
+  padding-left: 10px;
+  border: 1px solid #DDD !important;
+}
+
+.filter .select-specialist-label,
+.filter .cheack-gender-label{
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.filter form label{
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.filter .filter-search-btn{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #09e5ab;
+    border: 1px solid #09e5ab;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* end filter */
+
+.result-search{
+  margin-top: 10px;
+}
+
+.result-search .result-box > div{
+  width: 46%;
+  float: left;
+  overflow: hidden;
+  margin: 1%;
+  border: 1px solid #DDD;
+  padding: 1.5rem;
+  box-shadow: 0 .5rem .5rem #F8F9FA;
+  border-radius: .25rem;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.result-box .doctor-info{
+  border-bottom: 1px solid #DDD;
+  padding-bottom: 15px;
+  border-radius: 7px;
+}
+
+.result-box .doctor-info img{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.result-box .doctor-info span{
+  text-transform: capitalize;
+}
+
+.result-box .doctor-info span:first-of-type{
+  font-size: 25px;
+  color: #3b5999;
+}
+
+.result-box .doctor-info span:last-of-type{
+  font-size: large;
+  color: #dd4b39;
+}
+
+.p-rating .p-rating-star{
+  margin-top: 4px;
+  color: #09e5ab;
+}
+
+.p-rating .p-rating-star:last-of-type{
+  color: #DDD;
+}
+
+.p-rating-star {
+  background-color: transparent;
+  border: transparent;
+}
+
+.doctor-parem ul li{
+  margin-top: 10px;
+}
+
+.doctor-parem ul li i{
+  margin-right: 10px;
+  color: #13a4cd;
+}
+
+.result-box .btn{
+  background-color: #53a7ea;
+  margin-top: 20px !important;
+  height: 50px;
+  width: 47%;
+}
+
+.result-box .btn:first-of-type{
+  background-color: transparent;
+  color: #2e87b3;
+  border: 1px solid #ddd;
+}
+
+@media(max-width: 867px){
+  .result-box .btn{
+    font-size: 14px;
+    margin-top: 8px !important;
+    width: 100%;
+  }
+}
+
+@media(max-width: 600px){
+  .result-box .btn{
+    font-size: 12px;
+  }
+}
+
+@media(max-width: 524px){
+
+  .filter{
+    margin-top: -30px;
+    margin-bottom: 1rem;
+  }
+
+  .result-search .result-box > div{
+    width: 100%;
+  }
+
+  .result-box .doctor-info span:first-of-type{
+    font-size: 20px;
+  }
+
+  .result-box .doctor-info .doctor-decreption{
+    font-size: 10px;
+  }
+
+  .doctor-parem ul li span{
+    font-size: 16px;
+  }
+
+  .result-box .btn{
+    height: 35px;
+    margin-top: 9px !important;
+    font-size: 14px;
+  }
+}
+
+/* start search doctor divs */
+
+
+/* ==================================Doctor Profile Page=========================================================== */
+
+.doctor-profile .profile{
+  padding: 1.5rem;
+  border: 1px solid #DDD;
+  box-shadow: 0 .5rem .5rem #F8F9FA;
+  border-radius: .25rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin-top: 15px;
+  padding-bottom: 55px;
+}
+
+.doctor-profile .profile .doctor-pic,
+.doctor-profile .profile .doctor-information{
+  border-bottom: 1px solid #DDD;
+  padding-bottom: 40px;
+}
+
+.doctor-profile .profile .doctor-pic img{
+  width: 120px;
+  height: 120px;
+  border: 4px solid #3b5999d7;
+  border-radius: 50%;
+  float: left;
+}
+
+.doctor-profile .profile .doctor-pic span{
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.doctor-profile .profile .doctor-pic span:first-of-type{
+  font-size: 25px;
+  color: #2e87b3;
+}
+
+.doctor-profile .profile .doctor-pic span:last-of-type{
+  font-size: 15px;
+  color: #dd4b39;
+}
+
+.doctor-profile .profile .doctor-information ul{
+  margin-top: 33px;
+}
+
+.doctor-profile .profile .doctor-information ul li{
+  margin-top: 18px;
+}
+
+.doctor-profile .profile .doctor-information ul li i{
+  margin-right: 8px;
+  font-size: 18px;
+  color: #2e87b3;
+}
+
+.doctor-profile .profile .doctor-information ul li span{
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.doctor-profile .doctor-social ul{
+  margin-top: 20px;
+}
+
+.doctor-profile .doctor-social ul li{
+  float: left;
+  width: 20%;
+  border: 1px solid #DDD;
+  text-align: center;
+  margin-right: 5px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.doctor-profile .doctor-social ul li i{
+  color: #fff;
+}
+
+.doctor-profile .doctor-social ul li:first-of-type{
+  background-color: #3b5999;
+  border: 1px solid #3b5999;
+}
+
+.doctor-profile .doctor-social ul li:nth-of-type(2){
+  background-color: #dd4b39;
+  border:1px solid #dd4b39;
+}
+
+.doctor-profile .doctor-social ul li:nth-of-type(3){
+  background-color: #55acee;
+  border:1px solid #55acee;
+}
+
+.doctor-profile .doctor-social ul li:last-of-type{
+  background-color: #09e5ab;
+  border: 1px solid #09e5ab;
+}
+
+.doctor-profile .doctor-social ul li a{
+  display: inline-block;
+  width: 100%;
+}
+
+.doctor-service div{
+  margin-top: 20px;
+}
+
+.doctor-service .p-rating,
+.doctor-service .doctor-like,
+.doctor-service .doctor-comment,
+.doctor-service .patient-number,
+.doctor-service .doctor-services{
+  padding: 1.5rem;
+  border: 1px solid #DDD;
+  box-shadow: 0 .5rem .5rem #F8F9FA;
+  border-radius: .25rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+
+.doctor-service .doctor-like i,
+.doctor-service .doctor-comment i,
+.doctor-service .patient-number i{
+  margin-right: 10px;
+  color: #13a4cd;
+  font-size: 18px;
+}
+
+.doctor-service span{
+  font-size: 18px;
+}
+
+
+.doctor-appitment-data{
+  height: 200px;
+}
+
+.doctor-appitment-data .appoitment,
+.doctor-education,
+.docotor-comment,
+.p-profile{
+  padding: 1.5rem;
+  border: 1px solid #DDD;
+  box-shadow: 0 .5rem .5rem #F8F9FA;
+  border-radius: .25rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin-top: 15px;
+  padding-bottom: 55px;
+}
+
+.doctor-appitment-data .appoitment #input-date-time-picker{
+  border: 1px solid #DDD;
+  padding-left: 10px;
+  border-radius: 8px;
+}
+
+.doctor-appitment-data .appoitment .appoitment-label h6{
+  font-size: 20px;
+  color: #09e5ab;
+}
+
+.doctor-appitment-data .appoitment .rules h6{
+  color: #dd4b39;
+  font-size: 20px;
+}
+
+.doctor-appitment-data .appoitment ul li{
+  margin-top: 10px;
+}
+
+.doctor-appitment-data .appoitment ul li:before{
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f105";
+  color: #13a4cd ;
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.doctor-appitment-data .appoitment ul li span{
+  font-size: 18px;
+}
+
+.doctor-appitment-data .appoitment .confirm-btn{
+  width: 50%;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 30px;
+  border: 1px solid #09e5ab;
+  background-color: #09e5ab;
+  color: #fff;
+  font-size: 22px;
+}
+
+.doctor-date-info .collapsible-header .material-icons{
+  color: #2e87b3;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.doctor-date-info .collapsible-header span{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.doctor-date-info .collapsible-body img{
+  width: 30%;
+  border: 1px solid #DDD;
+  margin-right: 5px;
+  border-radius: 5px;
+  height: 200px;
+}
+
+@media(max-width: 768px){
+  .doctor-date-info .collapsible-body img{
+    height: 150px;
+  }
+}
+
+@media(max-width: 524px){
+  .doctor-date-info .collapsible-body img{
+    height: 80px;
+  }
+}
+
+.doctor-education .education-label h6,
+.comment-label h6{
+  color: #3b5999;
+  font-size: 30px;
+}
+
+.doctor-education ul li{
+  margin-top: 10px;
+  font-size: 16px;
+  transition: all .5s linear;
+}
+
+.doctor-education ul li:before{
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f101";
+  color: #3b5999;
+  margin: 0 8px 0 0;
+}
+
+.doctor-education div:last-of-type{
+  margin-top: 25px;
+}
+
+.color-li-education{
+  color: #dd4b39;
+  cursor: pointer;
+  transform: translateX(20px);
+}
+
+.docotor-comment .avatar img{
+  width: 70px !important;
+  height: 70px !important;
+  border: 3px solid #DDD;
+}
+
+.docotor-comment .collection-item span{
+  padding-left: 20px;
+  color: #3b5999;
+  font-size: 20px !important;
+  text-transform: capitalize;
+}
+
+.docotor-comment .collection-item p,
+.docotor-comment .collection-item a{
+  padding-left: 20px;
+  margin-left: 20px;
+}
+
+.docotor-comment .collection-item p:last-of-type{
+  color: #0de0fe;
+}
+
+.docotor-comment .collection-item a{
+  color: #dd4b39 !important;
+}
+
+.docotor-comment #leave-comment{
+  width: 80%;
+  border: 1px solid #DDD !important;
+  padding-left: 20px;
+}
+
+.docotor-comment .send-comment{
+  height: 47px;
+  width: 10%;
+  color: #fff;
+  background-color: #09e5ab;
+  border: 1px solid #09e5ab;
+  cursor: pointer;
+  font-weight: bold;
+
+}
+
+/* ==================================Patient Profile Page=========================================================== */
+
+.patient-profile .p-profile .p-pic img{
+  width: 35%;
+  border-radius: 50%;
+}
+
+.patient-profile .p-profile .p-pic{
+  border-bottom: 1px solid #DDD;
+  padding-bottom: 20px;
+}
+
+.patient-profile .p-profile h6{
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.patient-profile .p-profile span.p-id{
+  color: #757575;
+  font-weight: bold;
+}
+
+.patient-profile .p-profile .p-place i{
+  color: #2e87b3;
+  margin-right: 5px;
+}
+
+.patient-profile .p-profile .p-place{
+  margin-top: 10px;
+}
+
+.patient-profile .p-info{
+  width: 100%;
+}
+
+.patient-profile .p-info i{
+  color: #2e87b3;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.patient-profile .p-info span{
+  font-size: 18px;
+}
+
+.patient-profile .p-info span:last-of-type{
+  color: #3b5999;
+  font-weight: 500;
+}
+/* .patient-profile form,
+.doctor-service .log form{
+  width: 100%;
+}
+.patient-profile .log-out{
+  margin-top: 10px;
+  height: 35px;
+  width: 50%;
+  background-color: rgba(209, 6, 6, 0.904);
+  border: 1px solid rgba(209, 6, 6, 0.904);
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #fff;
+  
+} */
+
+.phone,
+.user-gender,
+.blood,
+.p-appoitment{
+  padding: 1.5rem;
+  border: 1px solid #DDD;
+  box-shadow: 0 .5rem .5rem #F8F9FA;
+  border-radius: .25rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin-top: 15px;
+}
+
+.p-appoitment .p-appoitment-info{
+  height: 290px;
+  overflow-y: scroll;
+}
+
+.p-appoitment .p-appoitment-label h6{
+  font-size: 20px;
+  font-weight: bold;
+  color: #093e58;
+}
+
+.p-appoitment .p-appoitment-info .action-app{
+  display: inline-block;
+  text-align: center;
+  line-height: 35px;
+  width: 46%;
+  margin-right: 5px;
+  height: 35px;
+  background-color: transparent;
+  border: 1px solid rgba(221, 221, 221, 0.383);;
+  color: #dd4b39;
+  cursor: pointer;
+}
+
+.p-appoitment-info table a:hover{
+  color: #093e58;
+}
+
+.p-appoitment .p-appoitment-info .fa-times-circle{
+  color: darkred;
+  font-size: 20px;
+}
+
+.p-appoitment .p-appoitment-info .fa-ellipsis-h{
+  color: rgb(189, 189, 10);
+  font-size: 20px;
+}
+
+
+.p-appoitment .p-appoitment-info .fa-check-circle{
+  color: darkgreen;
+  font-size: 20px;
+}
+
+.p-prescription .p-preception-view,
+.p-bill .p-bill-view{
+  color: #09e5ab !important;
+}
+
+/* ======================================ADD BILLING PAGE ======================================== */
+
+.add-bill{
+  padding: 1.5rem;
+  border: 1px solid #DDD;
+  box-shadow: 0 .5rem .5rem #F8F9FA;
+  border-radius: .25rem;
+  background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-top: 15px;
+}
+
+.add-bill .bill-labe{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #DDD;
+}
+
+.add-bill .d-info-bill > div{
+  width: 50%;
+  float: left;
+}
+
+.add-bill .d-info-bill h6{
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.add-bill .d-info-left{
+  text-align: right !important;
+}
+
+.add-bill .add-item table td input{
+  border: 1px solid #DDD !important;
+  padding-left: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  height: 40px;
+}
+
+.add-bill .add-item .item-btn-add,
+.item-btn-delete{
+  margin-top: 20px;
+  text-align: left;
+  width: 50%;
+  height: 30px;
+  font-size: 15px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: #093e58;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-bill .add-item .item-btn-add:before{
+  font-family: "Font Awesome 5 free";
+  font-weight: bold;
+  margin-right: 5px;
+  content: "\f055" ;
+}
+
+.item-btn-delete{
+  text-align: right !important;
+}
+
+.item-btn-delete:focus{
+  background-color: transparent;
+  outline: 0;
+}
+
+.add-bill .add-item .item-btn-delete:before{
+  font-family: "Font Awesome 5 free";
+  font-weight: bold;
+  margin-right: 5px;
+  content: "\f056" ;
+}
+
+.add-bill .bill-save{
+  background-color: #09e5ab;
+  border: 1px solid #09e5ab;
+  color: #fff;
+  width: 20%;
+  height: 59px;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-top: 45px;
+  cursor: pointer;
+}
+
+.add-bill .bill-clear{
+  background-color: #757575;
+  border: 1px solid #757575;
+}
+
+/* ==========================patient dashboard page ============================== */
+
+.nav-patient-dashboard{
+  background-color: #2E87B3;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.nav-patient-dashboard .nav-icon-d{
+  float: left;
+}
+
+.nav-patient-dashboard .user-view a{
+  float: left;
+}
+
+.nav-patient-dashboard a.sidenav-trigger i{
+  font-size: 34px;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 2px;
+  color: #fff;
+}
+
+.nav-patient-dashboard .label-p-dashboard{
+  color: #FFF;
+  font-size: large;
+  margin-left: 10px;
+  
+}
+
+.nav-patient-dashboard .user-view{
+  overflow: hidden;
+  padding-bottom: 20px !important;
+}
+
+
+.nav-patient-dashboard .user-view .p-d-image{
+  margin: 10px 10px 0 0;
+}
+
+.nav-patient-dashboard .user-view .background{
+  height: 150px;
+}
+
+.nav-patient-dashboard #slide-out li i{
+  margin-right: 10px !important;
+  color: #3b5999;
+}
+
+/* =================================patient setting page============================== */
+
+.p-setting{
+  padding: 1.5rem;
+  border: 1px solid #DDD;
+  box-shadow: 0 .5rem .5rem #F8F9FA;
+  border-radius: .25rem;
+  background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-top: 15px;
+}
+
+.p-setting .p-setting-pic{
+  overflow: hidden;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #DDD;
+}
+
+.p-setting .p-setting-pic img{
+  width: 20%;
+  float: left;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.p-setting .p-setting-pic .patient-upload-photo{
+  height: 40px;
+  color: #fff;
+  background-color:#13a4cd;
+  border: 1px solid #13a4cd;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.p-setting .p-setting-pic .allowed{
+  display: inline-block;
+  font-size: 13px;
+  color: rgb(199, 198, 198);
+  margin-top: 10px;
+}
+
+.p-setting .p-setting-form form{
+  margin-top: 20px;
+}
+
+.p-setting .p-setting-form form .input{
+  margin-top: 10px;
+  float: left;
+  width: 45%;
+  margin-right: 17px;
+}
+
+.p-setting .p-setting-form form .input input{
+  border: 1px solid #DDD !important;
+  border-radius: 5px;
+  padding-left: 8px;
+}
+
+.p-setting .p-setting-form form .input span{
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+
+.p-setting .p-setting-form form .input .select-wrapper input.select-dropdown{
+  margin-top: 0 !important;
+  width: 99%;
+}
+
+.p-setting .p-setting-form form .adress{
+  width: 92%;
+}
+
+.p-setting form .save-changes{
+  width: 40%;
+  height: 50px;
+  background-color: #09e5ab;
+  border: 1px solid #09e5ab;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 30px;
+  cursor: pointer;
+  outline: 0;
+}
+
+@media(max-width: 524px){
+  .p-setting .p-setting-form form .input{
+    width: 100%;
+  }
+}
+
+ /* =================================patient Change password page============================== */ 
+ .p-d-s-change-password{
+  padding: 1.5rem;
+  border: 1px solid #DDD;
+  box-shadow: 0 .5rem .5rem #F8F9FA;
+  border-radius: .25rem;
+  background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-top: 15px;
+ }
+
+ .p-d-s-change-password span{
+   display: inline-block;
+   font-weight: bold;
+   font-size: 15px;
+   margin-top: 10px !important;
+ }
+
+ .p-d-s-change-password form{
+   position: relative;
+ }
+
+ .p-d-s-change-password input{
+   border: 1px solid #DDD !important;
+   border-radius: 5px !important;
+   width: 50% !important;
+   padding-left: 5px !important;
+   margin-top: 5px !important;
+ }
+
+ .p-d-s-change-password input:last-of-type{
+  width: 30% !important;
+  padding-left: 0 !important;
+ }
+
+ .p-d-s-change-password .save-new-password{
+  width: 40%;
+  height: 50px;
+  background-color: #09e5ab;
+  border: 1px solid #09e5ab;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 30px;
+  cursor: pointer;
+  outline: 0;
+}
+
+.p-d-s-change-password .togle-passwod-vis{
+  background-color: transparent;
+  width: 6%;
+  height: 48px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ @media(max-width: 768px){
+  .p-d-s-change-password input{
+    width: 100% !important;
+  }
+}
+
+
+ /* =================================Daocroe dashboard page============================== */ 
+
+.d-dashboard-app-label{
+  font-size: 20px;
+  margin-top: 15px !important;
+  font-weight: bold;
+}
+
+.d-dashpoard-app{
+  height: 350px !important ;
+  overflow-y: scroll;
+}
+
+.p-appoitment .d-dashpoard-app .action-app:first-of-type{
+  color: #09e5ab;
+}
+
+ /* =================================Daocroe setting page============================== */ 
+ .patient-profile .d-profile-p{
+   font-size: 13px !important;
+   color: #757575;
+ }
+
+ .patient-profile img.d-dashboard-pic{
+   border-radius: 0 !important;
+   width: 170px !important;
+ }
+
+ .p-setting .d-setting-label{
+   font-weight: bold;
+   margin-bottom: -25px;
+ }
+
+
+ .p-setting .text-about{
+   border-radius: 5px;
+   width: 100%;
+   height: 200px;
+ }
+
+ .p-setting .cilnic-upload-photo{
+   width: 93%;
+   margin-top: 10px;
+   height: 150px;
+   background-color: transparent;
+   border: 2px dashed #CCC;
+   font-size: 20px;
+   cursor: pointer;
+ }
+
+ .p-setting .cilnic-upload-photo i{
+   color: #093e58;
+   font-size: 20px;
+ }
+
+ .p-setting label:last-of-type{
+   margin-left: 40px;
+ }
+
+ .p-setting .price-per-hour{
+   border: 1px solid #DDD !important;
+   padding-left: 5px !important ;
+   margin-top: 20px !important;
+   display: none;
+   transition: all .5s ease;
+ }
+
+ .p-setting .sevice{
+   width: 100%;
+   margin-top: 30px !important;
+ }
+
+ .p-setting .sevice input{
+  height: 20px !important;
+  border: 1px solid #DDD;
+  border-radius: 5px;
+}
+
+.p-setting .edu-input{
+  width: 31.5% !important;
+  float: left;
+  margin-right: 15px;
+}
+
+.p-setting .edu-input input{
+  border: 1px solid #DDD !important;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+
+@media(max-width: 768px){
+  .p-setting .edu-input{
+    width: 100% !important;
+    margin-top: 5px;
+  }
+  
+}
+
+
+/* ===================================social media page============================== */
+
+.social-dotor{
+  padding: 1.5rem;
+  border: 1px solid #DDD;
+  box-shadow: 0 .5rem .5rem #F8F9FA;
+  border-radius: .25rem;
+  background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-top: 15px;
+}
+
+.social-dotor form input{
+  border: 1px solid #DDD !important;
+  border-radius: 5px !important;
+  padding-left: 5px !important;
+}
+
+.social-dotor form > div{
+  margin-top: 20px !important;
+}
+
+
+.social-dotor .save-changes{
+  width: 40%;
+  height: 50px;
+  background-color: #09e5ab;
+  border: 1px solid #09e5ab;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 30px;
+  cursor: pointer;
+  outline: 0;
+
+}

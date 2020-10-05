@@ -1,0 +1,212 @@
+{% load static %}
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <!-- google icon -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- materlized css -->
+  <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+  <!-- slick css -->
+  <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}">
+  <!-- foontawesome -->
+  <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+  <!-- style css -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <link rel="stylesheet" href="{% static 'css/jquery.tagsinput.css'%}">
+   <link  href="{%static 'css/picker.css'%}" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hames</title>
+  <!-- Latest compiled and minified CSS -->
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+ <style>
+                input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+              </style>
+<!-- Latest compiled and minified JavaScript -->
+</head>
+<body>
+
+
+  <!-- start navbar -->
+
+  <!-- dropdow 1 (doctor) -->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">Patient</a></li>
+    <li class="divider"></li>
+    {% if not request.user.is_authenticated%}
+    <li><a href="{%url 'doctor_reg'%}">Register as doctor</a></li>
+    {% endif %}
+  </ul>
+
+  <!-- dropdow 2 (patient) -->
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a href="{%url 'search_doctor' %}">Search Doctor</a></li>
+    <li class="divider"></li>
+    {% if not request.user.is_authenticated%}
+    <li><a href="{%url 'patient_reg' %}">Rigister as patient</a></li>
+    {% endif %}
+  </ul>
+
+  <ul id="dropdown3" class="dropdown-content">
+    <li><a href="#!">Patient</a></li>
+    <li><a href="{%url 'doctor_reg'%}">rigister</a></li>
+  </ul>
+
+  <ul id="dropdown4" class="dropdown-content">
+    <li><a href="{%url 'login'%}">login</a></li>
+    <li><a href="">Search Docotr</a></li>
+    <li><a href="{%url 'patient_reg' %}">Rigister</a></li>
+  </ul>
+
+  <!-- nav bar -->
+  <nav>
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="{%url 'index' %}" class="brand-logo"><img src="{%static 'images/logo.png'%}" alt=""></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="{%url 'index' %}">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a class="dropdown-trigger" href="#" data-target="dropdown1">Doctor<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a class="dropdown-trigger" href="#" data-target="dropdown2">Patient<i class="material-icons right">arrow_drop_down</i></a></li>
+          {% if request.user.is_authenticated%}
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="{% url 'logout'%}">
+              <span class="clearfix  d-sm-inline-block "> Logout </span>
+            </a>
+          </li>
+
+          <li class ='nav-item'>
+            <a class="nav-link waves-effect" href="{% url 'profile' user.id %}">
+              <span class="clearfix  d-sm-inline-block ">{{ user.get_username }}</span>
+            </a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="{% url 'login'%}">
+              <span class="clearfix  d-sm-inline-block "> Login </span>
+            </a>
+          </li>
+          {% endif%}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="{%url 'index'%}">Home</a></li>
+    <li><a href="./about.html">About</a></li>
+    <li><a class="dropdown-trigger" href="#" data-target="dropdown3">Doctor<i class="material-icons right">arrow_drop_down</i></a></li>
+    <li><a class="dropdown-trigger" href="#" data-target="dropdown4">Patient<i class="material-icons right">arrow_drop_down</i></a></li>
+    <li><a href="./faq.html">FAQ</a></li>
+  </ul>
+  {% if messages %}
+  <ul class="messages">
+      {% for message in messages %}
+      {% if message.tags %}
+      <div class="alert alert-{{ message.tags }}" role="alert">
+          {{ message }}
+      </div>
+      {% endif %}
+      {% endfor %}
+  </ul>
+  {% endif %}
+
+  <!-- end navbar -->
+
+  {%block content%}
+
+
+  {%endblock content%}
+
+
+
+  <!-- start footer -->
+  <div class="footer">
+    <div class="row">
+      <div class="col m12 l3">
+        <div class="footer-header"><img src="{%static 'images/footer-logo.png'%}" alt=""></div>
+        <div class="footer-descreption">
+          <p class="descre">Lorem ipsum dolor sit amet consectetur , doloribus obcaecati quos pariatur quidem eum rerum vitae iste, ipsa deleniti architecto tempora maxime porro fugiat! Quia.</p>
+          <div class="footer-follow">
+            <ul class="follow-icon">
+              <li><a href="#"><i class=""><i class="fab fa-facebook-f"></i></i></a></li>
+              <li><a href="#"><i class=""><i class="fab fa-twitter"></i></i></a></li>
+              <li><a href="#"><i class=""><i class="fab fa-instagram"></i></i></a></li>
+              <li><a href="#"><i class=""><i class="fab fa-youtube"></i></i></a></li>
+              <li><a href="#"><i class=""><i class="fab fa-codepen"></i></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="footer-header">
+          Patient&Doctor
+        </div>
+        <ul class="footer-pient-doctor">
+          <li><a href="./search-doctor.html">Search</a></li>
+          <li><a href="{%url 'login' %}">Login</a></li>
+          <li><a href="./doctor-profile.html">Booking</a></li>
+        </ul>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="footer-header">
+          For title
+        </div>
+        <ul class="footer-pient-doctor">
+          <li><a href="#">About</a></li>
+          <li><a href="#">faQ</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col m12 l3">
+        <div class="footer-header">
+          Contact Us
+        </div>
+        <ul class="footer-contact">
+          <li><i class="fas fa-location-arrow"></i><span>Egypt, Assuit (75711), Gomhirai street</span></li>
+          <li><i class="fas fa-phone-alt"></i><span>01098586783</span></li>
+          <li><i class="fas fa-envelope"></i><span>omarasmar9699@gmail.com</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <div class="copy-right">
+          <h6>All copy &copy; right was reseved </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end footer -->
+
+
+  <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+  <script src="{% static 'js/slick.min.js'%}"></script>
+  <script src="{% static 'js/materialize.min.js'%}"></script>
+  <script src="{% static 'js/popper.min.js'%}"></script>
+  <script src="{% static 'js/main.js'%}"></script>
+  <script src="{% static 'js/picker.js'%}"></script>
+  <script src="{% static 'js/ResizeSensor.js'%}"></script>
+  <script src="{% static 'js/theia-sticky-sidebar.js'%}"></script>
+  <script src="{% static 'js/jquery.tagsinput.js'%}"></script>
+
+</body>
+</html>

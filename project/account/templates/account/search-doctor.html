@@ -1,0 +1,145 @@
+{% extends 'account/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+  <!-- start search bar title -->
+
+  <div class="search-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div class="search-bar-title">
+            <h6>Search about any doctor with amazing filter and</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end search bar title -->
+
+  <!-- start search divs -->
+  <div class="search-doctor">
+    <div class="row">
+      <div class="col s12 l3 theiaStickySidebar">
+        <div class="filter">
+          <div class="filter-label"> <span>search filter</span></div>
+          <div class="filter-form">
+            <form name="myform" method="GET" action="{% url 'search_doctor' %}">
+              {%csrf_token%}
+              <div class="cal-icon">
+                <input type="text" name="search" placeholder="Search by doctor name" />
+              </div>
+              <div class="cheack-gender">
+                <div class="cheack-gender-label">
+                  <span>Gender</span>
+                </div>
+                <label>
+                  <input type="checkbox" class="filled-in"  name="gender1" value="M"/>
+                  <span>Male Doctor</span>
+                </label><br>
+                <label>
+                  <input type="checkbox" class="filled-in" name="gender2" value="F"/>
+                  <span>Female Doctor</span>
+                </label>
+              </div>
+
+              <div class="select-specialist">
+                <div class="select-specialist-label">
+                  <span>Select Specialist</span>
+                </div>
+                <label>
+                  <input type="checkbox" class="filled-in" name="specialization1" value="Dentistry"/>
+                  <span>Dentistry</span>
+                </label><br>
+                <label>
+                  <input type="checkbox" class="filled-in" name="specialization2" value="Ophthalmology"/>
+                  <span>Ophthalmology</span>
+                </label><br>
+                <label>
+                  <input type="checkbox" class="filled-in" name="specialization3" value="Oncology"/>
+                  <span>Oncology</span>
+                </label><br>
+                <label>
+                  <input type="checkbox" class="filled-in" name="specialization4" value="Surgery medicine"/>
+                  <span>Surgery medicine</span>
+                </label><br>
+                <label>
+                  <input type="checkbox" class="filled-in" name="specialization5" value="Hematology"/>
+                  <span>Hematology</span>
+                </label><br>
+                <label>
+                  <input type="checkbox" class="filled-in" name="specialization6" value="Mental Health Medicine"/>
+                  <span>Mental Health Medicine</span>
+                </label><br>
+                <label>
+                  <input type="checkbox" class="filled-in" name="specialization7" value="Dermatology and Venereology"/>
+                  <span>Dermatology and Venereology</span>
+                </label><br>
+                <label>
+                  <input type="checkbox" class="filled-in" name="specialization8" value="Obstetrics and Gynecology"/>
+                  <span>Obstetrics and Gynecology</span>
+                </label><br>
+                <label>
+                  <input type="checkbox" class="filled-in" name="specialization9" value="Pediatrics"/>
+                  <span>Pediatrics</span>
+                </label><br>
+              </div>
+              <input class="filter-search-btn" type="submit" value="Search">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 l9">
+        <div class="result-search">
+          <div class="result-box">
+            {%for doc in doctors%}
+            <div class="result">
+              <div class="doctor-info">
+                <img
+                        {%if doc.img%}
+                        src="{{doc.img.url}}"
+                        {%else%}
+                        src = "{%static 'images/doctor/doctor-01.jpg'%}"
+                        {%endif%}
+                        alt="doctor">
+                <span class="doctor-name">{{doc.doctor_name}}</span><br>
+                <span class="doctor-decreption">{{doc.bio}}</span><br>
+                <span class="doctor-field">{{doc.doctor_specialization}}</span><br>
+                <div class="p-rating">
+                  <button class="p-rating-star"><i class="fas fa-star"></i></button>
+                  <button class="p-rating-star"><i class="fas fa-star"></i></button>
+                  <button class="p-rating-star"><i class="fas fa-star"></i></button>
+                  <button class="p-rating-star"><i class="fas fa-star"></i></button>
+                  <button class="p-rating-star"><i class="fas fa-star"></i></button>
+                </div>
+              </div>
+              <div class="doctor-parem">
+                <ul>
+                  <li><i class="fas fa-location-arrow"></i><span>{{doc.address}}</span></li>
+                  <li><i class="fas fa-comment"></i><span>12</span></li>
+                  <li><i class="fas fa-money-bill"></i><span>{{doc.price}}/h</span></li>
+                  <li><i class="fas fa-location-arrow"></i><span>{{doc.address}}</span></li>
+                  <li><i class="fas fa-phone-alt"></i><span>{{doc.phone}}</span></li>
+                </ul>
+              </div>
+              <button class="btn"><a href="{%url 'doctor_profile' doc.pk %}">View profile</a></button>
+              <button class="btn"><a style="color: #FFF;" href="./doctor-profile.html">Book Appoitment</a style="color: #FFF;"></button>
+            </div>
+            <!-- rebeet item -->
+            {%endfor%}
+
+             <!-- rebeet item -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end search divs -->
+
+
+ {% endblock content%}
